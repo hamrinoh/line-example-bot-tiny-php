@@ -1,3 +1,9 @@
+https://cryptic-ravine-98809.herokuapp.com/  
+https://git.heroku.com/cryptic-ravine-98809.git
+
+
+
+
 Line Bot 基礎範例程式碼教學 (PHP) - 輕量版 LINEBotTiny.php
 ====================
 
