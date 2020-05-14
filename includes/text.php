@@ -28,4 +28,29 @@ if (strtolower($message['text']) == "text" || $message['text'] == "文字"){
         )
     ));
 }
+
+if (strtolower($message['text'] == "您好")){
+    $client->replyMessage(array(
+        'replyToken' => $event['replyToken'],
+        'messages' => array(
+            array(
+                'type' => 'text', // 訊息類型 (文字)
+                'text' => '歡迎來到二書小站，我是二二!' // 回復訊息
+            )
+        )
+    ));
+}
+
+if (strtolower($message['text'] == "今天是")){
+    $date = date("Y-m-d");
+    $client->replyMessage(array(
+        'replyToken' => $event['replyToken'],
+        'messages' => array(
+            array(
+                'type' => 'text', // 訊息類型 (文字)
+                'text' => $date   // 回復訊息
+            )
+        )
+    ));
+}
 ?>
