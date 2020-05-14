@@ -72,8 +72,9 @@ foreach ($client->parseEvents() as $event) {
                 'replyToken' => $event['replyToken'],
                 'messages' => array(
                     array(
-                        'type' => 'text',
-                        'text' => '您好，這是一個範例 Bot OuO
+                        'type' => 'hello','hi','您好'
+                        'hello','hi','您好' => '(2 stars)感謝您加入二書小站(2 stars)(happy)
+                        若不想接收提醒，可以點選本畫面右上方的選單圖示，然後關閉「提醒」的設定喔 Bot OuO
 
 範例程式開源至 GitHub (包含教學)：
 https://github.com/GoneTone/line-example-bot-php'
@@ -86,8 +87,8 @@ https://github.com/GoneTone/line-example-bot-php'
                 'replyToken' => $event['replyToken'],
                 'messages' => array(
                     array(
-                        'type' => 'text',
-                        'text' => '大家好，這是一個範例 Bot OuO
+                        'type' => '請問',
+                        '請問' => '您好~歡迎您來到二書小站，我們這邊有提供各式各樣的書籍及物品，我是客服人員二二，有問題歡迎隨時詢問我哦~ Bot OuO
 
 範例程式開源至 GitHub (包含教學)：
 https://github.com/GoneTone/line-example-bot-php'
