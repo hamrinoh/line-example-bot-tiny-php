@@ -53,4 +53,23 @@ if (strtolower($message['text'] == "今天是")){
         )
     ));
 }
+
+if ($message['text']) == "靜儀是天使嗎?"){
+    
+    $people = array('天使', '惡魔')
+
+    $num = rand(0, count($people)-1);
+
+    $msg = "靜儀一直都是" . $people[$num];
+
+    $client->replyMessage(array(
+        'replyToken' => $event['replyToken'],
+        'messages' => array(
+            array(
+                'type' => 'text', // 訊息類型 (文字)
+                'text' => 'Hello, world!' // 回復訊息
+            )
+        )
+    ));
+}
 ?>
