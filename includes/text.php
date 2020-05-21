@@ -56,7 +56,7 @@ if (strtolower($message['text'] == "今天是")){
 
 if ($message['text']) == "靜儀是天使嗎?"){
 
-    $people = array('天使', '惡魔')
+    $people = array('天使', '惡魔');
 
     $num = rand(0, count($people)-1);
 
