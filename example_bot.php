@@ -73,7 +73,7 @@ foreach ($client->parseEvents() as $event) {
                 'messages' => array(
                     array(
                         'type' => 'text',
-                        'text' => '感謝您加入二書小站，若不想接收提醒，可以點選本畫面右上方的選單圖示，然後關閉「提醒」的設定喔'
+                        'text' => '感謝您加入二書小站，若不想接收提醒，可以點選本畫面右上方的選單圖示，然後關閉「提醒」的設定喔~'
                     )
                 )
             ));
