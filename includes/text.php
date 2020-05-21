@@ -54,7 +54,7 @@ if (strtolower($message['text'] == "今天是")){
     ));
 }
 
-/*
+
 if ($message['text'] == "靜儀是天使嗎?"){
 
     $people = array('天使', '惡魔');
@@ -73,5 +73,5 @@ if ($message['text'] == "靜儀是天使嗎?"){
         )
     ));
 }
-*/
+
 ?>
