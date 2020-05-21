@@ -78,10 +78,7 @@ if ($message['text'] == "靜儀是天使嗎?"){
 if ($message['text'] == "統一發票"){
 
     $url = "http://invoice.etax.nat.gov.tw";
-
     $page = file_get_contents($url);
-
-    $msg = "今天是".date("Y-m-d");
 
     $msg = "";
     if ($page) {
@@ -115,8 +112,8 @@ if ($message['text'] == "統一發票"){
     } else {
         echo "無法取得網頁";
     }
-
-
+    
+    $msg = "今天是".date("Y-m-d");
     $client->replyMessage(array(
         'replyToken' => $event['replyToken'],
         'messages' => array(
