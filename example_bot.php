@@ -73,8 +73,7 @@ foreach ($client->parseEvents() as $event) {
                 'messages' => array(
                     array(
                         'type' => 'text',
-                        'text' => '(2 stars)感謝您加入二書小站(2 stars)(happy)
-                        若不想接收提醒，可以點選本畫面右上方的選單圖示，然後關閉「提醒」的設定喔 Bot OuO'
+                        'text' => '感謝您加入二書小站，若不想接收提醒，可以點選本畫面右上方的選單圖示，然後關閉「提醒」的設定喔'
                     )
                 )
             ));
@@ -85,7 +84,7 @@ foreach ($client->parseEvents() as $event) {
                 'messages' => array(
                     array(
                         'type' => 'text',
-                        'text' => '您好~歡迎您來到二書小站，我們這邊有提供各式各樣的書籍及物品，我是客服人員二二，有問題歡迎隨時詢問我哦~ Bot OuO'
+                        'text' => '您好~歡迎您來到二書小站，我們這邊有提供各式各樣的書籍及物品，我是客服人員二二，有問題歡迎隨時詢問我哦~'
                     )
                 )
             ));
