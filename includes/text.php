@@ -91,7 +91,7 @@ if ($message['text'] == "統一發票"){
         
         // 用 tag 名稱擷取
         $h2s = $dom->getElementsByTagName('h2');
-        $msg .= "開獎期間：".$h2s[1]->textContent."";
+        $msg .= "開獎期間：".$h2s[1]->textContent."\n";
 
         $xpath = new DOMXPath($dom);
         // 用 class 名稱擷取
