@@ -105,7 +105,7 @@ if ($message['text'] == "統一發票"){
             $msg .= "特獎 ".$nodes[1]->textContent."\n";
             $msg .= "頭獎 ".$nodes[2]->textContent."\n";
             $msg .= "增開六獎 ".$nodes[3]->textContent."\n";
-            $msg .= $dates[0]->textContent;
+            $msg .= $dates[4]->textContent;
         } else {
             echo "查無資料:";
         }
@@ -114,7 +114,7 @@ if ($message['text'] == "統一發票"){
         echo "無法取得網頁";
     }
     
-    $msg = "今天是".date("Y-m-d");
+   
     $client->replyMessage(array(
         'replyToken' => $event['replyToken'],
         'messages' => array(
