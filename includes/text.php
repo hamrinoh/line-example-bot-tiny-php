@@ -91,7 +91,7 @@ if ($message['text'] == "統一發票"){
         
         // 用 tag 名稱擷取
         $h2s = $dom->getElementsByTagName('h2');
-        echo "開獎期間：".$h2s[1]->textContent."";
+        $msg .= "開獎期間：".$h2s[1]->textContent."";
 
         $xpath = new DOMXPath($dom);
         // 用 class 名稱擷取
@@ -107,11 +107,11 @@ if ($message['text'] == "統一發票"){
             $msg .= "增開六獎 ".$nodes[3]->textContent."\n";
             $msg .= $dates[4]->textContent;
         } else {
-            echo "查無資料:";
+            $msg .= "查無資料:";
         }
         libxml_clear_errors();
     } else {
-        echo "無法取得網頁";
+        $msg .= "無法取得網頁";
     }
     
    
