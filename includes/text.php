@@ -126,13 +126,14 @@ if ($message['text'] == "統一發票"){
     ));
 }
 
-/*
+
 if ($message['text'] == "中央新聞社"){
 
     $url = "https://www.cna.com.tw/list/aall.aspx";
     $page = file_get_contents($url);
     // echo $page;
 
+    $msg = ""; 
     if ($page) {
 
         libxml_use_internal_errors(true);
