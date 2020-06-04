@@ -46,8 +46,8 @@ function getElementsByClassName($dom, $ClassName, $tagName=null) {
                 libxml_use_internal_errors(true);
 
                 $dom = new DOMDocument();
+                $dom -> loadHTML('<?xml encoding="utf-8" ?>' .$page);
                 
-                //$dom -> loadHTML(mb_convert_encoding($page, 'HTML-ENTITIES', 'UTF-8'));
 
                 echo "<h1>中央社即時新聞</h1>";
                 // 用 tag 名稱擷取
