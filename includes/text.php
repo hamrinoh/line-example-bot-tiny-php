@@ -126,4 +126,54 @@ if ($message['text'] == "統一發票"){
     ));
 }
 
+if ($message['text'] == "中央新聞社"){
+
+    $url = "https://www.cna.com.tw/list/aall.aspx";
+    $page = file_get_contents($url);
+    // echo $page;
+
+    if ($page) {
+
+        libxml_use_internal_errors(true);
+
+        $dom = new DOMDocument();
+        $dom -> loadHTML('<?xml encoding="utf-8" ?>' .$page);
+        // $dom -> loadHTML(mb_convert_encoding($page, 'HTML-ENTITIES', 'UTF-8'));
+
+        echo "<h1>中央社即時新聞</h1>";
+        // 用 tag 名稱擷取
+        $main = $dom->getElementById('jsMainList');
+        $lists = $main->getElementsByTagName('li');
+
+        $i=1;
+        foreach ($lists as $node) {
+            
+            // 取得標題文字
+            $ntxts = $node -> getElementsByTagName('span');
+            $ntxt  = $ntxts[0]->textContent;
+
+            // 取得超連結
+            $links = $node->getElementsByTagName('a');
+            $href  = $links[0]->getAttribute('href');
+            
+            // 取得日期時間
+            $ndate = getElementsByClassName($node, 'date');
+            $sdate = $ndate[0]->textContent;
+
+            // 顯示結果
+            echo "<p>".strval($i).".".$sdate." ".$ntxt."(".$href.")</p>";
+            $i++;
+        }
+
+        libxml_clear_errors();
+    } else {
+        echo "無法取得網頁";
+    }
+
+    /*
+    $doc = new DOMDocument();
+    $doc -> loadHTML(mb_convert_encoding($page, 'HTML-ENTITIES', 'UTF-8'));
+    echo $doc->saveHTML();
+    */
+
 ?>
