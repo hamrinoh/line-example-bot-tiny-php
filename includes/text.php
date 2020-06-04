@@ -172,6 +172,22 @@ if ($message['text'] == "中央新聞社"){
         $msg .= "無法取得網頁";
     }
 
+    
+        $client->replyMessage(array(
+            'replyToken' => $event['replyToken'],
+            'messages' => array(
+                array(
+                    'type' => 'text', // 訊息類型 (文字)
+                    'text' => $msg // 回復訊息
+                )
+            )
+        ));
+
+
+    }
+
+
+
     /*
     $doc = new DOMDocument();
     $doc -> loadHTML(mb_convert_encoding($page, 'HTML-ENTITIES', 'UTF-8'));
