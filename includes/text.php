@@ -142,7 +142,7 @@ if ($message['text'] == "中央新聞社"){
         $dom -> loadHTML('<?xml encoding="utf-8" ?>' .$page);
         // $dom -> loadHTML(mb_convert_encoding($page, 'HTML-ENTITIES', 'UTF-8'));
 
-        echo "<h1>中央社即時新聞</h1>";
+        $msg .= "<h1>中央社即時新聞</h1>";
         // 用 tag 名稱擷取
         $main = $dom->getElementById('jsMainList');
         $lists = $main->getElementsByTagName('li');
@@ -163,13 +163,13 @@ if ($message['text'] == "中央新聞社"){
             $sdate = $ndate[0]->textContent;
 
             // 顯示結果
-            echo "<p>".strval($i).".".$sdate." ".$ntxt."(".$href.")</p>";
+            $msg .= "<p>".strval($i).".".$sdate." ".$ntxt."(".$href.")</p>";
             $i++;
         }
 
         libxml_clear_errors();
     } else {
-        echo "無法取得網頁";
+        $msg .= "無法取得網頁";
     }
 
     /*
