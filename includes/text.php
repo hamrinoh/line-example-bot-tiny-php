@@ -126,6 +126,7 @@ if ($message['text'] == "統一發票"){
     ));
 }
 
+/*
 if ($message['text'] == "中央新聞社"){
 
     $url = "https://www.cna.com.tw/list/aall.aspx";
