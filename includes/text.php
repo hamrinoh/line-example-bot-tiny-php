@@ -126,7 +126,7 @@ if ($message['text'] == "統一發票"){
     ));
 }
 
-
+/*
 if ($message['text'] == "中央新聞社"){
 
     $url = "https://www.cna.com.tw/list/aall.aspx";
@@ -172,7 +172,7 @@ if ($message['text'] == "中央新聞社"){
         $msg .= "無法取得網頁";
     }
 
-    
+
         $client->replyMessage(array(
             'replyToken' => $event['replyToken'],
             'messages' => array(
