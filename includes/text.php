@@ -35,7 +35,7 @@ if (strtolower($message['text'] == "您好")){
         'messages' => array(
             array(
                 'type' => 'text', // 訊息類型 (文字)
-                'text' => '歡迎來到二書小站，我是二二!' // 回復訊息
+                'text' => '歡迎來到二書不正經小站，我是二二!<提醒您本站在粉絲團販賣二手書服務，如有需要請至FB:二書小站購買。>' // 回復訊息
             )
         )
     ));
@@ -55,13 +55,13 @@ if (strtolower($message['text'] == "今天是")){
 }
 
 
-if ($message['text'] == "靜儀是天使嗎?"){
+if ($message['text'] == "今天看什麼小說?"){
 
-    $people = array('天使', '惡魔');
+    $people = array('The Monkey`s paw', 'A Christmas Carol' , 'Martin Luther King' , 'Cry Freedom' , 'Jane Eyre' , 'Pride and Prejudice');
 
     $num = rand(0, count($people)-1);
 
-    $msg = "靜儀一直都是" . $people[$num];
+    $msg = "今天要看" . $people[$num];
 
     $client->replyMessage(array(
         'replyToken' => $event['replyToken'],
